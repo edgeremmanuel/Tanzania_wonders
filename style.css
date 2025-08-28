@@ -188,6 +188,7 @@ nav ul li a:hover:after {
     min-height: 600px;
     overflow: hidden;
     margin-top: 70px;
+    width: 100%;
 }
 
 .hero-content {
