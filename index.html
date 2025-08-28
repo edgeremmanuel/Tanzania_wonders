@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanzania Wonders - Explore the Beauty of Tanzania</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Tanzania Wonders Logo">
+                <h1>Tanzania Wonders</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#safaris">Safaris</a></li>
+                    <li><a href="#culture">Culture</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Discover the Magic of Tanzania</h2>
+            <p>Experience breathtaking wildlife, pristine beaches, and rich cultural heritage<br>
+              Unforgettable Safaris, Pristine Beaches, and Majestic Mountains Await You.</p>
+            <a href="#tours" class="btn">Explore Tours</a>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('images/serengeti.jpg')"></div>
+            <div class="slide" style="background-image: url('images/zanzibar.jpg')"></div>
+            <div class="slide" style="background-image: url('images/kilimanjaro.jpg')"></div>
+        </div>
+        <div class="slider-controls">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="featured-destinations" id="destinations">
+        <div class="container">
+            <h2>Featured Destinations</h2>
+            <p class="section-subtitle">Explore Tanzania's most spectacular places</p>
+            
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="images/serengeti-park.jpg" alt="Serengeti National Park">
+                    <div class="card-content">
+                        <h3>Serengeti National Park</h3>
+                        <p>Witness the Great Migration and Africa's Big Five in one of the world's most famous wildlife reserves.</p>
+                        <a href="#" class="btn-small">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="images/kilimanjaro-mountain.jpg" alt="Mount Kilimanjaro">
+                    <div class="card-content">
+                        <h3>Mount Kilimanjaro</h3>
+                        <p>Challenge yourself to reach the "Roof of Africa" on this iconic mountain climb.</p>
+                        <a href="#" class="btn-small">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="images/zanzibar-beach.jpg" alt="Zanzibar">
+                    <div class="card-content">
+                        <h3>Zanzibar</h3>
+                        <p>Relax on pristine beaches and explore the historic Stone Town, a UNESCO World Heritage Site.</p>
+                        <a href="#" class="btn-small">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="images/ngorongoro.jpg" alt="Ngorongoro Crater">
+                    <div class="card-content">
+                        <h3>Ngorongoro Crater</h3>
+                        <p>Descend into the world's largest inactive volcanic caldera teeming with wildlife.</p>
+                        <a href="#" class="btn-small">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tours -->
+    <section class="popular-tours" id="tours">
+        <div class="container">
+            <h2>Popular Tours</h2>
+            <p class="section-subtitle">Handpicked experiences for your Tanzanian adventure</p>
+            
+            <div class="tours-tabs">
+                <button class="tab-btn active" data-tab="safari">Safari Tours</button>
+                <button class="tab-btn" data-tab="beach">Beach Holidays</button>
+                <button class="tab-btn" data-tab="trekking">Trekking Adventures</button>
+                <button class="tab-btn" data-tab="cultural">Cultural Experiences</button>
+            </div>
+            
+            <div class="tours-content">
+                <div class="tab-panel active" id="safari">
+                    <div class="tour-card">
+                        <img src="images/serengeti-safari.jpg" alt="Serengeti Safari">
+                        <div class="tour-info">
+                            <h3>Classic Serengeti Safari</h3>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-clock"></i> 7 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Serengeti, Ngorongoro</span>
+                                <span><i class="fas fa-dollar-sign"></i> From $2,500</span>
+                            </div>
+                            <p>Experience the best of Tanzania's wildlife with expert guides, luxury lodges, and unforgettable game drives.</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <img src="images/tarangire-safari.jpg" alt="Tarangire Safari">
+                        <div class="tour-info">
+                            <h3>Tarangire & Manyara Explorer</h3>
+                            <div class="tour-meta">
+                                 <span><i class="fas fa-clock"></i> 5 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Tarangire, Lake Manyara</span>
+                                <span><i class="fas fa-dollar-sign"></i> From $1,800</span>
+                            </div>
+                            <p>Discover elephant herds in Tarangire and tree-climbing lions in Lake Manyara National Park.</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-panel" id="beach">
+                    <div class="tour-card">
+                        <img src="images/zanzibar-holiday.jpg" alt="Zanzibar Holiday">
+                        <div class="tour-info">
+                            <h3>Zanzibar Beach Escape</h3>
+                            <div class="tour-meta">
+                                <span><i class="fas fa-clock"></i> 8 Days</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Zanzibar</span>
+                                <span><i class="fas fa-dollar-sign"></i> From $1,200</span>
+                            </div>
+                            <p>Relax on white sandy beaches, snorkel in crystal clear waters, and explore spice plantations.</p>
+                            <a href="#" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional tour panels would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Safari Packages -->
+    <section class="safari-packages" id="safaris">
+        <div class="container">
+            <h2>Safari Packages</h2>
+            <p class="section-subtitle">Tailored experiences for every traveler</p>
+            
+            <div class="package-cards">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Budget Safari</h3>
+                        <div class="price">$1,200<span>/person</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> 5-day camping safari</li>
+                        <li><i class="fas fa-check"></i> Serengeti & Ngorongoro</li>
+                        <li><i class="fas fa-check"></i> Experienced guide</li>
+                        <li><i class="fas fa-check"></i> All park fees included</li>
+                        <li><i class="fas fa-check"></i> Group joining</li>
+                    </ul>
+                    <a href="#" class="btn">Book Package</a>
+                </div>
+                
+                <div class="package-card featured">
+                    <div class="package-badge">Popular</div>
+                    <div class="package-header">
+                        <h3>Mid-Range Safari</h3>
+                        <div class="price">$2,500<span>/person</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> 7-day lodge safari</li>
+                        <li><i class="fas fa-check"></i> Serengeti, Ngorongoro, Tarangire</li>
+                        <li><i class="fas fa-check"></i> Private guide</li>
+                        <li><i class="fas fa-check"></i> Comfortable lodges</li>
+                        <li><i class="fas fa-check"></i> All meals included</li>
+                    </ul>
+                    <a href="#" class="btn">Book Package</a>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Luxury Safari</h3>
+                        <div class="price">$4,800<span>/person</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> 10-day premium safari</li>
+                        <li><i class="fas fa-check"></i> All major parks</li>
+                        <li><i class="fas fa-check"></i> Private guide & vehicle</li>
+                        <li><i class="fas fa-check"></i> Luxury tented camps</li>
+                        <li><i class="fas fa-check"></i> Hot air balloon ride</li>
+                    </ul>
+                    <a href="#" class="btn">Book Package</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Experience -->
+    <section class="cultural-experience" id="culture">
+        <div class="container">
+            <div class="culture-content">
+                <h2>Tanzanian Culture</h2>
+                <p>Tanzania is home to over 120 ethnic groups, each with its own unique traditions, languages, and customs. From the Maasai warriors to the Swahili coastal culture, experience the rich tapestry of Tanzanian heritage.</p>
+                
+                <div class="culture-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-music"></i>
+                        <h4>Traditional Music & Dance</h4>
+                        <p>Experience vibrant performances featuring drums, string instruments, and energetic dances.</p>
+                    </div>
+                    
+                    <div class="highlight">
+                        <i class="fas fa-utensils"></i>
+                        <h4>Local Cuisine</h4>
+                        <p>Taste authentic dishes like ugali, nyama choma, and Zanzibar's famous spices.</p>
+                    </div>
+                    
+                    <div class="highlight">
+                        <i class="fas fa-home"></i>
+                        <h4>Village Visits</h4>
+                        <p>Spend time with local communities and learn about traditional ways of life.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="culture-gallery">
+                <div class="gallery-item">
+                    <img src="images/maasai.jpg" alt="Maasai Tribe">
+                    <div class="gallery-overlay">
+                        <h4>Maasai Culture</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/swahili.jpg" alt="Swahili Culture">
+                    <div class="gallery-overlay">
+                        <h4>Swahili Coast</h4>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/hadzabe.jpg" alt="Hadzabe Tribe">
+                    <div class="gallery-overlay">
+                        <h4>Hadzabe Tribe</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Travelers Say</h2>
+            <p class="section-subtitle">Hear from those who've experienced Tanzania with us</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p>"The Serengeti safari exceeded all our expectations. Our guide was incredibly knowledgeable and we saw all the Big Five within the first two days. The lodges were comfortable and the food was excellent."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client1.jpg" alt="Sarah Johnson">
+                        <h4>Sarah Johnson</h4>
+                        <p>United States</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Climbing Kilimanjaro was the challenge of a lifetime, but with the support of our amazing guides and porters, we made it to Uhuru Peak. The sense of accomplishment was worth every step!"</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client2.jpg" alt="Mark Williams">
+                        <h4>Mark Williams</h4>
+                        <p>United Kingdom</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Zanzibar was paradise! The beaches were even more beautiful than in the pictures, and Stone Town was fascinating. We especially loved the spice tour and swimming with dolphins."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client3.jpg" alt="Emma Chen">
+                        <h4>Emma Chen</h4>
+                        <p>Australia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Plan Your Tanzanian Adventure</h2>
+                <p>Ready to experience the wonders of Tanzania? Contact our travel experts to start planning your dream trip.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>123 Safari Road, Arusha, Tanzania</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+255 123 456 789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@tanzaniawonders.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon-Fri: 8:00 AM - 5:00 PM</p>
+                            <p>Sat: 9:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <select id="interest">
+                            <option value="">I'm interested in...</option>
+                            <option value="safari">Safari Tours</option>
+                            <option value="beach">Beach Holidays</option>
+                            <option value="trekking">Mountain Trekking</option>
+                            <option value="cultural">Cultural Tours</option>
+                            <option value="custom">Custom Package</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get travel tips, special offers, and Tanzania inspiration delivered to your inbox.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo-white.png" alt="Tanzania Wonders Logo" class="footer-logo">
+                    <p>Your trusted partner for unforgettable Tanzanian adventures since 2010.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#tours">Tours</a></li>
+                        <li><a href="#safaris">Safaris</a></li>
+                        <li><a href="#culture">Culture</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Popular Tours</h4>
+                    <ul>
+                        <li><a href="#">Serengeti Safari</a></li>
+                        <li><a href="#">Kilimanjaro Trek</a></li>
+                        <li><a href="#">Zanzibar Beach Holiday</a></li>
+                        <li><a href="#">Ngorongoro Crater Tour</a></li>
+                        <li><a href="#">Tanzania Family Safari</a></li>
+                        <li><a href="#">Great Migration Experience</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tanzania Wonders. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
