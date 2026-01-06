@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarangire & Manyara Explorer - Book Now</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; color: #333; }
+        .container { max-width: 700px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        .subtitle { color: #6b7280; margin-bottom: 20px; }
+        .package-info { background-color: #e8f4f8; padding: 16px; border-radius: 6px; margin-bottom: 24px; line-height: 1.6; }
+        .package-info p { margin-bottom: 6px; }
+        .form-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+        @media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } .form-grid .full { grid-column: 1 / -1; } }
+        .form-group { display: flex; flex-direction: column; }
+        label { font-weight: 600; margin-bottom: 6px; }
+        input, select, textarea { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+        textarea { resize: vertical; min-height: 110px; }
+        .hint { font-size: 12px; color: #6b7280; margin-top: 6px; }
+        .addons { display: grid; grid-template-columns: 1fr; gap: 8px; }
+        @media (min-width: 640px) { .addons { grid-template-columns: 1fr 1fr; } }
+        .addon { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+        button { width: 100%; padding: 12px; background-color: #2ecc71; color: #fff; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 8px; }
+        button:hover { background-color: #27ae60; }
+        .note { font-size: 12px; color: #6b7280; margin-top: 12px; }
+        .back-link { display: inline-block; margin-bottom: 16px; color: #2563eb; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="back-link" href="index.html">← Back to Home</a>
+        <h1>Tarangire & Manyara Explorer</h1>
+        <p class="subtitle">Book your place on this 5-day adventure through Tanzania's iconic parks.</p>
+
+        <div class="package-info">
+            <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
+            <p><strong>Destinations:</strong> Tarangire National Park, Lake Manyara National Park</p>
+            <p><strong>Price:</strong> From $1,800 per person</p>
+            <p><strong>Includes:</strong> Accommodation, meals, guided game drives, park fees, transfers</p>
+        </div>
+
+        <form id="bookingForm">
+            <input type="hidden" name="tour" value="Tarangire & Manyara Explorer">
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests *</label>
+                    <input type="number" id="guests" name="guests" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Start Date *</label>
+                    <input type="date" id="date" name="date" required>
+                    <p class="hint">We recommend booking at least 4 weeks in advance during peak season.</p>
+                </div>
+                <div class="form-group">
+                    <label for="accommodation">Accommodation Type *</label>
+                    <select id="accommodation" name="accommodation" required>
+                        <option value="">Select an option</option>
+                        <option value="standard">Standard Lodge</option>
+                        <option value="deluxe">Deluxe Lodge</option>
+                        <option value="luxury">Luxury Camp</option>
+                    </select>
+                </div>
+                <div class="form-group full">
+                    <label>Add-ons (optional)</label>
+                    <div class="addons">
+                        <label class="addon"><input type="checkbox" name="addons" value="private-vehicle"> Private vehicle upgrade</label>
+                        <label class="addon"><input type="checkbox" name="addons" value="extra-night"> Extra night in Arusha</label>
+                        <label class="addon"><input type="checkbox" name="addons" value="cultural-visit"> Cultural village visit</label>
+                        <label class="addon"><input type="checkbox" name="addons" value="photography"> Photography-focused guiding</label>
+                    </div>
+                </div>
+                <div class="form-group full">
+                    <label for="comments">Special Requests</label>
+                    <textarea id="comments" name="comments" placeholder="Dietary needs, room preferences, occasions, etc."></textarea>
+                </div>
+            </div>
+
+            <button type="submit">Complete Booking</button>
+            <p class="note">By submitting, you agree to be contacted by our travel experts to finalize your itinerary and payment.</p>
+        </form>
+    </div>
+
+    <script>
+        // Prevent past dates
+        (function setMinDate() {
+            var d = new Date();
+            var tzOffset = d.getTimezoneOffset();
+            d = new Date(d.getTime() - (tzOffset * 60 * 1000));
+            var today = d.toISOString().split('T')[0];
+            var dateInput = document.getElementById('date');
+            if (dateInput) dateInput.min = today;
+        })();
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Basic client-side validation feedback (HTML5 required handles most)
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var guests = document.getElementById('guests').value;
+            var date = document.getElementById('date').value;
+            var accommodation = document.getElementById('accommodation').value;
+
+            if (!name || !email || !phone || !guests || !date || !accommodation) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            alert('Thank you for booking the Tarangire & Manyara Explorer!\n\n' +
+                  'Name: ' + name + '\n' +
+                  'Email: ' + email + '\n' +
+                  'Phone: ' + phone + '\n' +
+                  'Guests: ' + guests + '\n' +
+                  'Start Date: ' + date + '\n' +
+                  'Accommodation: ' + accommodation + '\n\n' +
+                  'We will contact you shortly to confirm availability and next steps.');
+            this.reset();
+            // Reapply min after reset in some browsers
+            (function() {
+                var d = new Date();
+                var tzOffset = d.getTimezoneOffset();
+                d = new Date(d.getTime() - (tzOffset * 60 * 1000));
+                var today = d.toISOString().split('T')[0];
+                document.getElementById('date').min = today;
+            })();
+        });
+    </script>
+</body>
+</html>
